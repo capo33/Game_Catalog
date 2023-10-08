@@ -33,4 +33,6 @@ public static class GameClient
   };
 
   public static Game[] GetGames() => games.ToArray();
+
+  public static void AddGame(Game game) => games.Add(game);
 }
