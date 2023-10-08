@@ -34,5 +34,9 @@ public static class GameClient
 
   public static Game[] GetGames() => games.ToArray();
 
-  public static void AddGame(Game game) => games.Add(game);
+  public static void AddGame(Game game)
+  {
+    game.Id = games.Max(g => g.Id) + 1;
+    games.Add(game);
+  }
 }
